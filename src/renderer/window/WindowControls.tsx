@@ -5,9 +5,6 @@
  * will the authors be held liable for any damages arising from the use of this software.
  * Read the LICENSE file for more details.
  *
- * @author  : guasam
- * @project : Electron Window
- * @package : Window Controls - Close, Minimize, Maximize (Component)
  */
 
 import classNames from 'classnames';
@@ -34,7 +31,7 @@ const WindowControls: React.FC<Props> = (props) => {
         `type-${props.platform}`,
       )}
     >
-      <ControlButton
+      {/* <ControlButton
         name='minimize'
         onClick={() => context.minimize()}
         path={minimizePath}
@@ -51,7 +48,7 @@ const WindowControls: React.FC<Props> = (props) => {
         onClick={() => context.exit()}
         path={closePath}
         title={props.tooltips ? 'Close' : null}
-      />
+      /> */}
     </section>
   );
 };

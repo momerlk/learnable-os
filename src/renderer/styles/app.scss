@@ -1,11 +1,3 @@
-/**
- * Licensed under the MIT License. See LICENSE file in the project root for license information.
- * Copyright (c) 2022 Codesbiome, guasam
- *
- * @author  : guasam
- * @project : ERWT Boilerplate
- * @package : Application Sass Stylesheet
-*/
 
 @import './dark_theme.scss';
 @import './light_theme.scss';
@@ -57,9 +49,7 @@ body {
 /* Grid texture */
 body {
   background-size: 32px 32px;
-  background-image:
-    linear-gradient(to right, #7070700d 1px, transparent 1px),
-    linear-gradient(to bottom, #7070700d 1px, transparent 1px);
+  background-color: orangered;
 }
 
 h1 {

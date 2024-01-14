@@ -5,9 +5,6 @@
  * will the authors be held liable for any damages arising from the use of this software.
  * Read the LICENSE file for more details.
  *
- * @author  : guasam
- * @project : Electron Window
- * @package : Window Titlebar (Component)
  */
 
 import React, { createRef, useContext, useEffect, useRef, useState } from 'react';

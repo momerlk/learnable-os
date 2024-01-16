@@ -2,10 +2,18 @@ import React, { useEffect, useState } from 'react';
 import '@styles/app.scss';
 import icons from '@components/icons';
 
+import Keyboard from 'react-simple-keyboard';
+import 'react-simple-keyboard/build/css/index.css';
+import "./styles.css"
+
 const Application: React.FC = () => {
   const [counter, setCounter] = useState(0);
   const [darkTheme, setDarkTheme] = useState(true);
   const [versions, setVersions] = useState<Record<string, string>>({});
+
+  const openTerminal = () => {
+    // Execute a command to open the Windows Command Prompt
+  };
 
   /**
    * On component mount
@@ -46,6 +54,14 @@ const Application: React.FC = () => {
     setDarkTheme(!darkTheme);
   }
 
+  let onChange = (input : any) => {
+    console.log("Input changed", input);
+  }
+
+  let onKeyPress = (button : any) => {
+    console.log("Button pressed", button);
+  }
+
   return (
     <div id='erwt'>
       <div className='header'>
@@ -53,8 +69,16 @@ const Application: React.FC = () => {
           <h1 style={{color : "white"}}>WELCOME TO YOUR LEARNABLE!</h1>
         </div>
         
+        <button onClick={openTerminal}>Open Terminal</button>
+        
         
       </div>
+      
+      <Keyboard
+          className="virtual-keyboard-container"
+          onChange={onChange}
+          onKeyPress={onKeyPress}
+        />
     </div>
   );
 };

@@ -27,8 +27,8 @@ export function createAppWindow(): BrowserWindow {
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: true,
-      nodeIntegrationInWorker: false,
-      nodeIntegrationInSubFrames: false,
+      nodeIntegrationInWorker: true,
+      nodeIntegrationInSubFrames: true,
       preload: APP_WINDOW_PRELOAD_WEBPACK_ENTRY,
       sandbox: false,
     },

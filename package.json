@@ -11,8 +11,7 @@
     "publish": "electron-forge publish",
     "lint": "eslint src/ --ext .ts,.js,.tsx,.jsx"
   },
-  "keywords": [
-  ],
+  "keywords": [],
   "author": {
     "name": "learnable",
     "url": "https://github.com/momerlk"
@@ -67,8 +66,10 @@
     "webpack": "^5.89.0"
   },
   "dependencies": {
+    "child_process": "^1.0.2",
     "electron-squirrel-startup": "^1.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-simple-keyboard": "^3.7.65"
   }
 }

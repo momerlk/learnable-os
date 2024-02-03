@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useCallback , useState } from 'react';
 import '@styles/app.scss';
 import icons from '@components/icons';
 
-import Keyboard from 'react-simple-keyboard';
-import 'react-simple-keyboard/build/css/index.css';
-import "./styles.css"
+import { RouterProvider , createBrowserRouter } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+
+
+
+
 
 const Application: React.FC = () => {
   const [counter, setCounter] = useState(0);
@@ -68,19 +71,34 @@ const Application: React.FC = () => {
         <div className='main-heading'>
           <h1 style={{color : "white"}}>WELCOME TO YOUR LEARNABLE!</h1>
         </div>
+
+        <input></input>
         
         <button onClick={openTerminal}>Open Terminal</button>
         
         
       </div>
+
       
-      <Keyboard
-          className="virtual-keyboard-container"
-          onChange={onChange}
-          onKeyPress={onKeyPress}
-        />
     </div>
   );
 };
 
-export default Application;
+const router = createBrowserRouter([
+  {
+    path: "/app_window/",
+    element: <Application />,
+  },
+  {
+    path: "/app_window/hello",
+    element: <div>Hello world!</div>,
+  },
+]);
+
+function App() {
+
+  return (
+    <RouterProvider router={router}/>
+  );
+}
+export default App;
